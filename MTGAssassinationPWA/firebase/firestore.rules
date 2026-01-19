@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function appCodeOk() {
+      return request.resource.data.appCode
+        == get(/databases/$(database)/documents/config/app).data.appCode;
+    }
+
+    // Chemin A: lectures publiques
+    match /config/{docId} {
+      allow read: true;
+      allow write: appCodeOk();
+    }
+
+    match /players/{playerId} {
+      allow read: true;
+      allow create, update, delete: appCodeOk();
+    }
+
+    match /decks/{deckId} {
+      allow read: true;
+      allow create, update, delete: appCodeOk();
+    }
+
+    match /leaderboard/{playerId} {
+      allow read: true;
+      allow create, update, delete: appCodeOk();
+    }
+
+    match /games/{gameId} {
+      allow read: true;
+      allow create, update, delete: appCodeOk();
+    }
+  }
+}

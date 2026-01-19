@@ -1,0 +1,115 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #e8eef6;
+}
+
+a { color: inherit; }
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: #121a24;
+  border: 1px solid #203042;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.row > * { flex: 1 1 260px; }
+
+input, select, button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2b3d52;
+  background: #0c131c;
+  color: #e8eef6;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #3b5472;
+  background: #162435;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+h1, h2, h3 { margin: 0 0 10px 0; }
+
+.small { font-size: 12px; opacity: 0.85; }
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 18px;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #2b3d52;
+  background: #0c131c;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid #2b3d52;
+  background: #0c131c;
+  font-size: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 8px;
+  border-bottom: 1px solid #203042;
+  text-align: left;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #3b5472;
+  background: #162435;
+  padding: 10px 12px;
+}
+
+.btn-ghost {
+  background: #0c131c;
+  border: 1px solid #2b3d52;
+}
+
+.btn-primary {
+  background: #243a54;
+  border: 1px solid #4b6a90;
+}
